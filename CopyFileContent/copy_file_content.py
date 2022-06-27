@@ -44,12 +44,14 @@ args = parser.parse_args()
 if args.lowercase and args.uppercase:
     error_text = termcolor.colored(f"[!] {sys.argv[0]}: bad usage of flags (you gave '--lowercase' and '--uppercase' at the same time)", "red")
     print(error_text)
+    parser.print_help()
     sys.exit(1)
 
 
 if not os.path.exists(args.filename):
     error_text = termcolor.colored(f"[!] {sys.argv[0]}: file not found or does not exists", "red")
     print(error_text)
+    parser.print_help()
     sys.exit(2)
 
 
