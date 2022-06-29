@@ -20,7 +20,5 @@ fi
 
 
 filename=$1
-file_content=$(cat ${filename})
 
-python3 -c "import pyperclip; pyperclip.copy('${file_content}')"
-
+cat $filename | xclip -selection c
