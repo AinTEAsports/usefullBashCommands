@@ -1,8 +1,15 @@
 #!/bin/bash
 
 
-ascii_art="SETUP.PY"
-echo -e "${ascii_art}\n"
+ascii_art="\n
+           __                  __    \n
+  ___ ___ / /___ _____    ___ / /    \n
+ (_-</ -_) __/ // / _ \_ (_-</ _ \\  \n
+/___/\__/\__/\\_,_/ .__(_)___/_//_/  \n
+                /_/                  \n
+"
+
+echo -e $ascii_art
 
 
 for filename in $(ls -1R); do
